@@ -8,7 +8,7 @@ export const Navbar = () => {
   return (
     <div className="py-2 lg:pr-10 flex items-center justify-between shadow-md  bg-white">
       {/* Left: Logo + School Name */}
-      <div className="flex items-center gap-4 pl-10">
+      <div className="flex items-center gap-4  ml-10">
         <img src="./logo.png" width={80} alt="Logo" />
         <SchoolName className="max-[425px]:hidden sm:block" />
       </div>
