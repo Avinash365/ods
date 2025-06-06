@@ -25,7 +25,7 @@ export const IconsBox = () => {
         />
 
         {isOpen && (
-          <div className="absolute right-0 top-8 bg-white p-1 shadow z-50">
+          <div className="absolute right-0 top-8 bg-[#7B7EEE]/20 p-1 border-2 border-white rounded-sm shadow z-50">
             <Dropdown />
           </div>
         )}
