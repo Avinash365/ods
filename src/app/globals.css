@@ -29,6 +29,36 @@
 
 }
 
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 bg-clip-text text-transparent;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500;
+  }
+
+  .gradient-border {
+    @apply bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 p-[2px] rounded-full;
+  }
+
+  .gradient-line {
+    @apply h-[2px] w-[35px] rounded-full bg-gradient-to-r from-cyan-400 via-pink-400 to-purple-500;
+  }
+
+  .gradient-icon {
+    @apply bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent;
+  } 
+
+  .hero-bg {
+  background-image: url('/leanding2.png');
+  background-size: cover;
+  /* background-position: center;  */
+  background-repeat: no-repeat;
+}
+}
+
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
