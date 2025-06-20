@@ -18,10 +18,10 @@ export const Dropdown = ({ onClose }) => {
         damping: 15,
         mass: 0.5,
       }}
-      className="flex flex-col gap-3 w-[250px] h-auto bg-white border border-white rounded-sm shadow-md p-3 "
+      className="flex flex-col gap-2 w-[250px] h-screen overflow-scroll bg-white border border-white rounded-sm shadow-md p-3 pb-15"
     >
       <RxCross2
-        className="cursor-pointer mx-auto mr-2 text-nav-text w-[20px] h-[20px]"
+        className="cursor-pointer mx-auto mr-2 text-nav-text min-w-[20px] min-h-[20px]"
         onClick={onClose}
       />
       <NavLink to="/" text="Home" className={linkBorder} />
@@ -29,7 +29,6 @@ export const Dropdown = ({ onClose }) => {
       <NavLink to="/gallery" text="Gallery" className={linkBorder} />
       <NavLink to="/services" text="Services" className={linkBorder} />
       <NavLink to="/contact" text="Contact Us" className={linkBorder} />
-
 
     </motion.div>
   );
