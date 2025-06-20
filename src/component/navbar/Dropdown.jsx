@@ -9,28 +9,28 @@ export const Dropdown = ({ onClose }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: -40 }}
+      initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
       transition={{
         type: "spring",
         stiffness: 120,
         damping: 15,
         mass: 0.5,
       }}
-      className="flex flex-col gap-3 w-[250px] h-screen bg-white border border-white rounded-sm shadow-md p-3 z-50"
+      className="flex flex-col gap-3 w-[250px] h-auto bg-white border border-white rounded-sm shadow-md p-3 "
     >
-      {/* Close Button */}
       <RxCross2
-        className="ml-auto mr-2 cursor-pointer text-blue-500 w-5 h-5 hover:scale-110 transition-transform"
+        className="cursor-pointer mx-auto mr-2 text-nav-text w-[20px] h-[20px]"
         onClick={onClose}
       />
-
-      {/* Nav Links */}
       <NavLink to="/" text="Home" className={linkBorder} />
       <NavLink to="/about" text="About Us" className={linkBorder} />
       <NavLink to="/gallery" text="Gallery" className={linkBorder} />
       <NavLink to="/services" text="Services" className={linkBorder} />
       <NavLink to="/contact" text="Contact Us" className={linkBorder} />
+
+
     </motion.div>
   );
 };

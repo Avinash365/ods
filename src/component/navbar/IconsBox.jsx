@@ -5,6 +5,9 @@ import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
 import { LuSquareMenu } from "react-icons/lu";
 import { Dropdown } from "./Dropdown";
+import { AnimatePresence , motion} from "framer-motion";
+
+
 
 export const IconsBox = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,13 +28,27 @@ export const IconsBox = () => {
           className={iconStyle}
           onClick={() => setIsOpen(!isOpen)}
         />
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 0.3, // Make this match the Dropdown transition
+              }}
+
+              className="absolute right-0 top-6 bg-[#7B7EEE]/20 p-1 border-2 border-white"
+            >
+              <Dropdown onClose={() => setIsOpen(false)} />
+
+            </motion.div>
+          )}
+        </AnimatePresence>
+
       </div>
 
-      {isOpen && (
-        <div className="fixed right-0 top-0 bg-[#7B7EEE]/20 p-1 border-2 border-white">
-          <Dropdown onClose={() => setIsOpen(false)} />
-        </div>
-      )}
+
     </div>
   );
 };

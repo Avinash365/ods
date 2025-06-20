@@ -9,8 +9,8 @@ const SchoolName = ({ className = "" }) => {
       </h2>
       <div className="flex items-center w-fit mx-auto">
         <Line />
-        <p className="mx-2 text-[12px] gradient-text">
-          Kolkata India
+        <p className="mx-2 text-[8px] gradient-text">
+          Come, Let's Play Together
         </p>
         <Line />
       </div>
