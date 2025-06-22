@@ -9,9 +9,10 @@ export const Navbar = () => {
   return (
      <div className="fixed top-0 z-50 py-2 w-full lg:pr-10 flex items-center justify-between bg-white/40 shadow-md">
       {/* Left: Logo + School Name */}
+
       <div className="flex items-center gap-4  ml-10">
         {/* <img src="./logo.png" width={80} alt="Logo" /> */}
-        <SchoolName className="max-[425px]:hidden sm:block" />
+        <SchoolName className="" />
       </div>
 
 
@@ -24,7 +25,7 @@ export const Navbar = () => {
         <NavLink to="/contact" text="Contact Us" />
       </div> 
 
-      <div className='min-[375px]:hidden min-[547px]:block'>
+      <div className='hidden lg:block'>
            <JoinUsBtn />
       </div>
      

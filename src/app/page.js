@@ -1,13 +1,13 @@
-import Image from "next/image";
+
 import { Navbar } from "@/component/navbar/Navbar";
-import { Landing } from "@/component/LandingSection.jsx/Landing";
-
-
+import HeroSection from "@/component/HeroSection.js/Landing";
+import AboutUs from "@/component/AboutUs.js/AboutUs";
 export default function Home() {
   return ( 
    <>
     <Navbar/>
-    <Landing/>
+    <HeroSection/>
+    <AboutUs/>
    </>
   )
 }
