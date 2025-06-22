@@ -21,7 +21,7 @@ export const Dropdown = ({ onClose }) => {
       className="flex flex-col gap-2 w-[250px] h-screen overflow-scroll bg-white border border-white rounded-sm shadow-md p-3 pb-15"
     >
       <RxCross2
-        className="cursor-pointer mx-auto mr-2 text-nav-text min-w-[20px] min-h-[20px]"
+        className="cursor-pointer mx-auto mr-2 text-nav-text min-w-[20px] max-h-[20px]"
         onClick={onClose}
       />
       <NavLink to="/" text="Home" className={linkBorder} />
