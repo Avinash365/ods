@@ -2,10 +2,11 @@
 
 import { FaCircle } from "react-icons/fa";
 import { useState } from "react";
+import { TextHeading } from "../ui/TextHeading";
 
 export const AboutUs = () => {
     const [expanded, setExpanded] = useState(false);
-    const toggleExpanded = () => setExpanded((prev) => !prev);  
+    // const toggleExpanded = () => setExpanded((prev) => !prev);  
 
   return (
     <section className="-mt-[50px]">
@@ -17,15 +18,14 @@ export const AboutUs = () => {
           <div className="relative inline-block mb-6">
             <FaCircle
             //   size={60}
-              className="absolute top-0 -left-3 lg:-left-5 text-[#33EFA0] z-0 text-4xl lg:text-6xl"
-            />
-            <h1 className="text-4xl lg:text-6xl font-medium text-heading-text relative z-10">
-              About Us
-            </h1>
+              className="absolute lg:top-2 -left-4  text-[#33EFA0] z-0 text-4xl lg:text-5xl"
+            /> 
+            <TextHeading text_1="About Us" className="relative z-10"/>
+
           </div>
 
           <p 
-          className={`text-lg lg:text-2xl font-normal leading-relaxed text-[#696984] mb-4 transition-all duration-300 ease-in-out ${
+          className={`text-xl lg:text-2xl font-normal leading-relaxed text-[#696984] mb-4 transition-all duration-300 ease-in-out ${
               expanded ? '' : 'line-clamp-4'
             }`} 
             >

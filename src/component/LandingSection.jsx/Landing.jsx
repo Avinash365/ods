@@ -6,7 +6,7 @@ export const Landing = () => {
       
       <div className="flex flex-col items-center justify-center min-h-screen text-center px-4">
         <div className="mt-40">
-          <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[60px] mt-2 text-heading-text">
+          <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl  mt-2 text-heading-text">
             COME, LET’S PLAY <span className="gradient-text">TOGETHER.</span>
           </h1>
           <p className="font-bold text-sm sm:text-base md:text-lg text-body-text max-w-2xl mx-auto mt-10 mb-6">
@@ -25,6 +25,7 @@ export const Landing = () => {
     </div>
   );
 };
+
 
 const ImgCard = ({ className = "" }) => {
   return (
