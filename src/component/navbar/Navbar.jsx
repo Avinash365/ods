@@ -7,10 +7,10 @@ import { JoinUsBtn } from './JoinUsBtn';
 
 export const Navbar = () => {
   return (
-     <div className="fixed top-0 z-50 py-2 w-full lg:pr-10 flex items-center justify-between bg-white shadow-md">
+     <div className="fixed top-0 z-50 py-2 w-full px-4 lg:pr-10 flex items-center justify-between bg-white shadow-md">
       {/* Left: Logo + School Name */}
 
-      <div className="flex items-center gap-4  ml-10">
+      <div className="flex items-center gap-4 ">
         {/* <img src="./logo.png" width={80} alt="Logo" /> */}
         <SchoolName className="" />
       </div>

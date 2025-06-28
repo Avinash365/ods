@@ -10,7 +10,7 @@ const ProgramCard = ({ id }) => {
 
         <Link
             href={`/curriculum/${courseId}`} passHref
-            className="max-w-[320px] p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer mx-auto ">
+            className="max-w-[320px] p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer mx-auto mt-10">
             {/* Icon box */}
             <div className="w-20 h-20 mb-4 rounded-lg bg-blue-100 border-2 border-dashed border-blue-300 flex items-center justify-center">
                 <img src={'/abc'} alt="Program Icon" className="w-10 h-10" />

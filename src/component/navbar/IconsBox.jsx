@@ -23,7 +23,7 @@ export const IconsBox = () => {
       <FaYoutube className={`${iconStyle} hidden xl:block`} />
 
       {/* Mobile menu icon */}
-      <div className="relative mr-10 lg:hidden cursor-pointer">
+      <div className="relative  lg:hidden cursor-pointer">
         <LuSquareMenu
           className={iconStyle}
           onClick={() => setIsOpen(!isOpen)}
