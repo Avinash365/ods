@@ -24,7 +24,9 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --color-nav-text: var(--strongBlue); 
+  --color-nav-text: var(--strongBlue);  
+  --color-sports-card-bg: var(--strongBlue); 
+
   --color-heading-text: var(--darkSlateBlue);
   --color-heading-text-end: var(--majorelleBlue);
   --color-body-text: var(--blueGray);

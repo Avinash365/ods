@@ -27,7 +27,7 @@ export const Dropdown = ({ onClose }) => {
       <NavLink to="/" text="Home" className={linkBorder} />
       <NavLink to="/about" text="About Us" className={linkBorder} />
       <NavLink to="/gallery" text="Gallery" className={linkBorder} />
-      <NavLink to="/services" text="Services" className={linkBorder} />
+      <NavLink to="/services/sports" text="Services" className={linkBorder} />
       <NavLink to="/contact" text="Contact Us" className={linkBorder} />
 
     </motion.div>
