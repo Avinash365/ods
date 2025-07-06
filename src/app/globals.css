@@ -7,8 +7,9 @@
   --strongBlue:#0408C3; 
   --darkSlateBlue:#17246D; 
   --majorelleBlue: #583CE1; 
-  --blueGray: #6971A3; 
-  
+  --blueGray: #6971A3;  
+  --skyBlue:#9DCCFF; 
+
   --font-gentium: 'Gentium Book Basic', serif;
   --font-gwendolyn: 'Gwendolyn', cursive; 
 }
@@ -27,7 +28,8 @@
   --color-heading-text: var(--darkSlateBlue);
   --color-heading-text-end: var(--majorelleBlue);
   --color-body-text: var(--blueGray);
-  --color-footer-bg: var(--darkSlateBlue);
+  --color-footer-bg: var(--darkSlateBlue); 
+  --color-card-bg: var(--skyBlue);
 
 }
 

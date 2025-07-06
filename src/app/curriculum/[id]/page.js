@@ -3,20 +3,20 @@ import { TextHeading } from "@/component/ui/TextHeading";
 import Button from "@/component/ui/Button";
 import programsData from "@/data/programsData";
 import { notFound } from 'next/navigation';
+import CurriculumDetails from "@/component/curriculum/CurriculumDetails";
 
+export default async function Curriculam({ params }) {
 
-export default function Curriculam({ params }) {
+    const {id} = await params; 
 
-    
-    const courseId = params.id;
-    const program = programsData.find(p => p.courseId === courseId);
+    const program = programsData.find(p => p.courseId === id);
 
     if (!program) return notFound();
 
     return (
         <div>
             {/* Hero Video */}
-            <div className="rounded-lg overflow-hidden aspect-video w-full mx-auto mt-20 p-4">
+            <div className="rounded-lg overflow-hidden aspect-video w-full  mx-auto mt-20 p-4">
                 <iframe
                     className="w-full h-full rounded-2xl"
                     src={program.videos[0]} // First video link from array
@@ -46,7 +46,11 @@ export default function Curriculam({ params }) {
                 <div className="flex justify-center">
                     <Button text="Enroll now" className="md:hidden mt-7" />
                 </div>
+            </div>  
+            <div className="px-10">
+                <CurriculumDetails/>
             </div>
+            
         </div>
     );
 }
