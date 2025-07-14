@@ -22,7 +22,7 @@ export const Navbar = () => {
         <NavLink to="/about" text="About Us" />
         <NavLink to="/gallery" text="Gallery" />
         <NavLink to="/services" text="Services" />
-        <NavLink to="/contact" text="Contact Us" />
+        <NavLink to="/careers" text="Careers" />
       </div> 
 
       <div className='hidden lg:block'>
