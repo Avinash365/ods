@@ -24,7 +24,7 @@ const WorkWithUs = () => {
                     {isExpanded ? "Read less" : "Read more"}
                 </button>
 
-                <CareersImage className={"hidden sm:block"}/>
+                <CareersImage className={"hidden sm:block"} />
                 <CareersImage />
             </div>
 
@@ -32,8 +32,9 @@ const WorkWithUs = () => {
             <div className="space-y-4 mt-10 flex flex-col items-center">
                 <CareersImage />
                 <CareersImage />
-                <TwoDotCircle className="mr-5 ml-auto  sm:mt-20"/>
+                <TwoDotCircle className="mr-5 ml-auto  sm:mt-20" />
             </div>
+            <TwoDotCircleWithRectangle />
         </div>
     );
 };
@@ -42,7 +43,7 @@ export default WorkWithUs;
 
 const CareersImage = ({ className }) => {
     return (
-        <div className={`w-[80%] aspect-square bg-amber-300 rounded-xl shadow-md ${className}`}>
+        <div className={`w-[80%]  aspect-square bg-amber-300 rounded-xl shadow-md ${className}`}>
             {/* Replace with an image or content */}
         </div>
     );
@@ -57,5 +58,23 @@ const TwoDotCircle = ({ className }) => {
     );
 };
 
+const TwoDotCircleWithRectangle = ({ className = "" }) => {
+    return (
+        <div className={`relative flex items-start ${className}`}>
+            {/* Dots */}
+            <div className="rotate-90 space-y-10">
+                <FaCircle className="text-[#F3A268] text-xl" />
+                <FaCircle className="text-[#687EF3] text-5xl lg:text-5xl ml-10" />
+            </div>
+
+            {/* Rectangle */}
+            <div className="absolute bottom-2 left-1 bg-[#CDD8FF] w-[80px] h-[20px] rounded-xl" />
+        </div>
+    );
+};
+
+
 export { TwoDotCircle };
+
+
 
