@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import SportsCard from "@/component/ui/SportsCard";
 import CustomAboutSection from "@/component/ui/CustomAboutSection";
 import SportsImageGrid from "@/component/ui/SportsImageGrid";
+import CurriImages from "@/component/curriculum/CurriImages"
 
 const Sports = () => {
   const scrollRef = useRef(null);
@@ -33,7 +34,7 @@ const Sports = () => {
   return (
     <>
       {/* 🎥 Fixed Fullscreen Video Background */}
-      <div className="fixed top-0 left-0 w-full h-[100vh] -z-10">
+      <div className="fixed top-0 left-0 w-full h-[400px] lg:h-[100vh] -z-10">
         <iframe
           className="w-full h-full"
           src="https://www.youtube.com/embed/zYhBJoBUSYA?si=OELTmC1qV8xWJo1F&autoplay=1&mute=1&loop=1&playlist=zYhBJoBUSYA"
@@ -46,8 +47,8 @@ const Sports = () => {
       </div>
 
       {/* 🏷️ Section Title Over Video */}
-      <div className="w-full h-screen bg-white/20 flex items-end pb-20 px-10">
-        <h1 className="text-4xl font-bold text-white">Sports Events</h1>
+      <div className="w-full h-[400px] lg:h-screen bg-white/20 flex items-end pb-20 px-10">
+        <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-white">Sports Events</h1>
       </div>
 
       {/* 🏃‍♂️ Horizontally Auto-Scrolling Cards */}
@@ -90,7 +91,11 @@ const Sports = () => {
         clampLines={3}
         className="md:pt-30"
       /> 
-      <SportsImageGrid/>
+      {/* <SportsImageGrid/> */}
+      <div className="bg-white">
+         <CurriImages/>
+      </div>
+     
     </>
   );
 };
