@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import SportsCard from "@/component/ui/SportsCard";
 import CustomAboutSection from "@/component/ui/CustomAboutSection";
+import SportsImageGrid from "@/component/ui/SportsImageGrid";
 
 const Sports = () => {
   const scrollRef = useRef(null);
@@ -88,7 +89,8 @@ const Sports = () => {
         videoUrl="https://www.youtube.com/embed/zYhBJoBUSYA?autoplay=1&mute=1"
         clampLines={3}
         className="md:pt-30"
-      />
+      /> 
+      <SportsImageGrid/>
     </>
   );
 };
