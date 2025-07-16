@@ -12,9 +12,8 @@ export default function Home() {
    <>
     <HeroSection/>
     <AboutUs/>
-     <Footer />
     <Programs/>
-    <OurServices/>
+    <OurServices/> 
    </>
   )
 }

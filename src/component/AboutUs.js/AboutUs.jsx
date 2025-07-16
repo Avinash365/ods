@@ -55,7 +55,7 @@ export const AboutUs = () => {
           <div className="relative z-10 rounded-lg overflow-hidden aspect-video w-full ">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/kdCUNPX8fz4?autoplay=1&mute=1"
+              src="https://www.youtube.com/embed/dpLtvTG3XK0?si=-5h_O9N2ap4gaInU"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
