@@ -1,22 +1,23 @@
 @import "tailwindcss";
 
+/* ===================== CSS Variables ===================== */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 
-  --strongBlue:#0408C3; 
-  --darkSlateBlue:#17246D; 
-  --majorelleBlue: #583CE1; 
-  --textGreen:#00CBB8;
-  --blueGray: #6971A3;  
-  --skyBlue:#9DCCFF; 
+  --strongBlue: #0408C3;
+  --darkSlateBlue: #17246D;
+  --majorelleBlue: #583CE1;
+  --textGreen: #00CBB8;
+  --blueGray: #6971A3;
+  --skyBlue: #9DCCFF;
 
   --font-gentium: 'Gentium Book Basic', serif;
-  --font-gwendolyn: 'Gwendolyn', cursive; 
+  --font-gwendolyn: 'Gwendolyn', cursive;
 }
 
-@theme{
-  
+/* ===================== Theme Config ===================== */
+@theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-serif: var(--font-gentium);
@@ -25,19 +26,19 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --color-nav-text: var(--strongBlue);  
-  --color-sports-card-bg: var(--strongBlue); 
+  --color-nav-text: var(--strongBlue);
+  --color-sports-card-bg: var(--strongBlue);
 
-  --color-green-heading-text:var(--textGreen);
+  --color-green-heading-text: var(--textGreen);
 
   --color-heading-text: var(--darkSlateBlue);
   --color-heading-text-end: var(--majorelleBlue);
   --color-body-text: var(--blueGray);
-  --color-footer-bg: var(--darkSlateBlue); 
+  --color-footer-bg: var(--darkSlateBlue);
   --color-card-bg: var(--skyBlue);
-
 }
 
+/* ===================== Tailwind Utilities ===================== */
 @layer utilities {
   .gradient-text {
     @apply bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 bg-clip-text text-transparent;
@@ -57,33 +58,38 @@
 
   .gradient-icon {
     @apply bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent;
-  } 
+  }
 
   .hero-bg {
-  background-image: url('/bg_lg1_.png');
+    background-image: url('/bg_lg1_.png');
+    background-size: cover;
+  }
 
-  background-size: cover;
-  
-}
-
-/* Change background image for large screens and above */
-@media (min-width: 1024px) {
-  .hero-bg {
-    background-image: url('/leanding2.png');
+  @media (min-width: 1024px) {
+    .hero-bg {
+      background-image: url('/leanding2.png');
+    }
   }
 }
-}
 
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+/* ===================== Global Styles (outside @layer!) ===================== */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-serif), Georgia, Times, serif;
+  font-family: var(--font-serif, Georgia, Times, serif);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hide scrollbar in all modern browsers */
+.scrollbar-hidden {
+  overflow: auto;
+  -ms-overflow-style: none;  /* IE 10+ */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
 }

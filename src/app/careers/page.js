@@ -4,11 +4,12 @@ import Eligibility from "@/component/careers/Eligibility"
 
 export default function Careers() {
     return (
-        <>
-            <HeroSection />
+        <div 
+            className="lg:px-15">
+            <HeroSection text_1="Join Our fast" text_2 = "growing Team"/>
             <WorkWithUs />
             <Eligibility/>
-        </>
+        </div>
 
     )
 }

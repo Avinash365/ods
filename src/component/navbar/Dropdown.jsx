@@ -4,6 +4,7 @@ import { NavLink } from "./Navbar";
 import { motion } from "framer-motion";
 import { RxCross2 } from "react-icons/rx";
 
+
 export const Dropdown = ({ onClose }) => {
   const linkBorder = "border-b border-blue w-full";
 
@@ -27,7 +28,9 @@ export const Dropdown = ({ onClose }) => {
       <NavLink to="/" text="Home" className={linkBorder} />
       <NavLink to="/about" text="About Us" className={linkBorder} />
       <NavLink to="/gallery" text="Gallery" className={linkBorder} />
-      <NavLink to="/services/sports" text="Services" className={linkBorder} />
+      {/* <NavLink to="/services/sports" text="Services" className={linkBorder} /> */}
+      <NavLink to="/" text="Parent-Toddler" className={linkBorder}/>
+      <NavLink to="/" text="Integrated Program" className={linkBorder}/>
       <NavLink to="/careers" text="Careers" className={linkBorder} />
 
     </motion.div>

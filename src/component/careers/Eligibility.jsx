@@ -3,12 +3,12 @@ import { TwoDotCircle } from "./WorkWithUs"
 
 const Eligibility = () => {
     return (
-        <div className="px-4 md:px-8">
+        <div className="px-4 md:px-8 pb-30 relative">
             <h1
                 className="text-heading-text text-3xl lg:text-4xl xl:text-5xl font-bold text-center">
                 Who We’re <span className="text-green-heading-text">Looking</span> For
             </h1>
-            <div className="w-fit mx-auto space-y-6 mt-10 px-4">
+            <div className="w-fit mx-auto space-y-6 mt-10 px-4 ">
                 <Skill skill="Experience in handling children across various age groups." />
                 <Skill skill="A genuine passion for fitness and child development." />
                 <Skill skill="Strong communication and leadership skills." />
@@ -16,8 +16,8 @@ const Eligibility = () => {
                 <Skill skill="A certification in physical education or sports training (preferred but not mandatory)" />
             </div>
             <div
-                className="float-left mt-6 sm:ml-20">
-                <TwoDotCircle className="rotate-90"/>
+                className="absolute bottom-20">
+                <TwoDotCircle className="rotate-70"/>
             </div>
 
         </div>

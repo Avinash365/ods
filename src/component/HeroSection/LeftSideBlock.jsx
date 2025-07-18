@@ -12,7 +12,7 @@ const item = {
   },
 };
 
-export default function LeftSideBlock() {
+export default function LeftSideBlock({text_1="COME, LET’S PLAY", text_2="TOGETHER"}) {
   return (
     <motion.div
       className="w-full md:w-1/2   md:mt-0  text-center md:text-left"
@@ -22,8 +22,8 @@ export default function LeftSideBlock() {
       variants={item}
     >
       <h1 className="text-3xl  lg:text-4xl xl:text-5xl font-bold text-[#1a237e] leading-tight">
-        COME, LET’S PLAY <br />
-        <span className="text-teal-500">TOGETHER</span>
+        {text_1} <br />
+        <span className="text-teal-500">{text_2}</span>
       </h1>
 
       <p className="font-hand text-orange-400 text-xl sm:text-2xl md:text-2xl xl:text-4xl tracking-[0.2em] rotate-[-4deg] mt-3">
