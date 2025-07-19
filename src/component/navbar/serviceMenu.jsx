@@ -23,7 +23,7 @@ export const ServiceMenu = () => {
     
         <NavLink to="/services/sports" text="Sports"  className={linkBorder}/>
         <NavLink to="/" text="Birthday Events" className={linkBorder}/>
-        <NavLink to="/" text="Parent-Toddler" className={linkBorder}/>
+        <NavLink to="/services/parentToddler" text="Parent-Toddler" className={linkBorder}/>
         <NavLink to="/" text="Integrated Program" className={linkBorder}/>
         <NavLink to="/" text="Our Programs" className={linkBorder}/>
 

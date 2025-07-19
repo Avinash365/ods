@@ -31,7 +31,7 @@ export default function LeftSideBlock({text_1="COME, LET’S PLAY", text_2="TOGE
       </p>
 
       <button className="mt-14 px-6 py-2 border border-purple-300 rounded-full text-purple-600 hover:bg-purple-100 transition duration-300 cursor-pointer">
-        Join Us
+        Enroll Now
       </button>
     </motion.div>
   );
