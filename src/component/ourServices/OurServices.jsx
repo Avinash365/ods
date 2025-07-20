@@ -38,12 +38,12 @@ const OurServices = () => {
             <ServiceBox
               href="/services/sports"
               title="Sports Events"
-              className="rounded-tl-[50px] sm:rounded-tl-[100px]"
+              className="rounded-tl-[50px] sm:rounded-tl-[100px] bg-[url('/ourServicesBg/sports.jpg')]"
             />
             <ServiceBox
               href="#"
-              title="Training Camps"
-              className="rounded-bl-[50px] sm:rounded-bl-[100px]"
+              title="Integrated Program"
+              className="rounded-bl-[50px] sm:rounded-bl-[100px] bg-[url('/ourServicesBg/sports.jpg')]"
             />
           </div>
 
@@ -52,12 +52,12 @@ const OurServices = () => {
             <ServiceBox
               href="#"
               title="Birthday Events"
-              className="rounded-tr-[50px] sm:rounded-tr-[100px]"
+              className="rounded-tr-[50px] sm:rounded-tr-[100px] bg-[url('/ourServicesBg/birthday.jpg')]"
             />
             <ServiceBox
               href="#"
               title="Parent-Toddler"
-              className="rounded-br-[50px] sm:rounded-br-[100px]"
+              className="rounded-br-[50px] sm:rounded-br-[100px] bg-[url('/ourServicesBg/parentToddler.jpg')]"
             />
           </div>
         </div>
@@ -75,9 +75,9 @@ const ServiceBox = ({ href, title, className }) => {
         overflow-hidden
         flex items-center justify-center text-center
         hover:scale-105 hover:shadow-lg transition-transform duration-300 cursor-pointer
-        bg-[url('/ourServicesBg/sports.jpg')] bg-cover bg-center`}
+        bg-cover bg-center`}
     >
-      <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+      <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
         <h1 className="text-xl sm:text-4xl font-semibold text-white">{title}</h1>
       </div>
     </a>

@@ -12,7 +12,7 @@ const GalleryCard = ({ thumbnail, title, url }) => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-block min-w-[250px] min-h-[300px] md:min-w-[349px] md:min-h-[488px] rounded-2xl overflow-hidden bg-amber-200 shadow-md hover:scale-105 transition duration-300 cursor-pointer"
+      className="inline-block min-w-[250px] min-h-[300px] md:min-w-[349px] md:min-h-[488px] rounded-2xl overflow-hidden bg-amber-200 shadow-md cursor-pointer"
     >
       <img src={thumbnail} alt={title} className="w-full h-full object-cover" />
     </a>
@@ -30,7 +30,7 @@ const HorizontalGallery = () => {
   };
 
   return (
-    <div className="relative mt-10 mb-10 px-4">
+    <div className="relative mt-10 mb-10 ">
       {/* Navigation Arrows */}
       <button
         onClick={() => scrollByOffset(-300)}

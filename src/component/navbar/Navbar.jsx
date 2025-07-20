@@ -27,7 +27,7 @@ export const Navbar = () => {
       {/* Center: Navigation Links */}
       <div className="hidden md:flex gap-3 h-[65px] items-center relative">
         <NavLink to="/" text="Home" />
-        <NavLink to="/about" text="About Us" />
+        <NavLink to="/aboutUs" text="About Us" />
         
         {/* Services with Dropdown */}
         <div className="relative">

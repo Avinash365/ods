@@ -1,5 +1,5 @@
 import HeroSection from "@/component/HeroSection/Landing";
-import AboutUs from "@/component/AboutUs.js/AboutUs";
+import AboutUs from "@/component/AboutUs/AboutUs";
 import Programs from "@/component/program/Programs";
 import OurServices from "@/component/ourServices/OurServices";
 import OurGallery from "@/component/ourGallery/OurGallery";

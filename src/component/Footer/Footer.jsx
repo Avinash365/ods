@@ -39,10 +39,10 @@ const Footer = () => {
             <div className="space-y-3">
                 <h1 className="text-xl font-semibold mb-8">Useful Links</h1>
                 <ul className="space-y-2">
-                    <li><Link href="/contact" className="hover:underline">Contact</Link></li>
+                    <li><Link href="/contact" className="hover:underline">Careers</Link></li>
                     <li><Link href="/gallery" className="hover:underline">Gallery</Link></li>
-                    <li><Link href="/photo-gallery" className="hover:underline">Photo Gallery</Link></li>
-                    <li><Link href="/video-gallery" className="hover:underline">Video Gallery</Link></li>
+                    <li><Link href="/photo-gallery" className="hover:underline">Integrated Program</Link></li>
+                    <li><Link href="/video-gallery" className="hover:underline">Sports Events</Link></li>
                     <li><Link href="/admission" className="hover:underline">Admission</Link></li>
                 </ul>
             </div>
@@ -75,7 +75,7 @@ const Footer = () => {
                 <div className="text-center space-y-3 py-4">
                 <hr className="border-white/30" />
                 <Link href="#" className="hover:underline">
-                    Copyright © 2024 Lofty Technologies Pvt. Ltd. All Rights Reserved
+                    Copyright © 2025 jha@avinash. All Rights Reserved
                 </Link>
             </div>
         </div>
@@ -86,7 +86,7 @@ export default Footer;
 
 // Reusable Icon + Text component
 const IconWithText = ({ Icon, children }) => (
-    <div className="flex items-center gap-3">
+    <div className="flex items-start gap-3">
         {Icon && <Icon className="rounded-full bg-white/50 p-2 min-w-[30px]" size={30} />}
         <p className="text-sm leading-relaxed">{children}</p>
     </div>
