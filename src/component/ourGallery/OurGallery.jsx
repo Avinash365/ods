@@ -30,7 +30,7 @@ const HorizontalGallery = () => {
   };
 
   return (
-    <div className="relative mt-10 mb-10 ">
+    <div id="gallery" className="relative mt-10 mb-10 ">
       {/* Navigation Arrows */}
       <button
         onClick={() => scrollByOffset(-300)}

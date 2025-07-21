@@ -3,8 +3,9 @@
 import { useEffect, useRef } from "react";
 import SportsCard from "@/component/ui/SportsCard";
 import CustomAboutSection from "@/component/ui/CustomAboutSection";
-import SportsImageGrid from "@/component/ui/SportsImageGrid";
-import CurriImages from "@/component/curriculum/CurriImages"
+import { VerticalLine } from "@/component/ui/Divider";
+import CurriImages from "@/component/curriculum/CurriImages";
+import sportsEventsData from "@/data/sportsEventsData";
 
 const Sports = () => {
   const scrollRef = useRef(null);
@@ -17,7 +18,6 @@ const Sports = () => {
       if (scrollContainer) {
         scrollContainer.scrollLeft += scrollAmount;
 
-        // Reset to start if fully scrolled
         if (
           scrollContainer.scrollLeft + scrollContainer.offsetWidth >=
           scrollContainer.scrollWidth
@@ -27,13 +27,13 @@ const Sports = () => {
       }
     };
 
-    const interval = setInterval(autoScroll, 20); // adjust speed
+    const interval = setInterval(autoScroll, 20);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <>
-      {/* 🎥 Fixed Fullscreen Video Background */}
+      {/*  Fixed Fullscreen Video Background */}
       <div className="fixed top-0 left-0 w-full h-[400px] lg:h-[100vh] -z-10">
         <iframe
           className="w-full h-full"
@@ -46,56 +46,50 @@ const Sports = () => {
         ></iframe>
       </div>
 
-      {/* 🏷️ Section Title Over Video */}
+      {/*  Section Title Over Video */}
       <div className="w-full h-[400px] lg:h-screen bg-white/20 flex items-end pb-20 px-10">
         <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-white">Sports Events</h1>
       </div>
 
-      {/* 🏃‍♂️ Horizontally Auto-Scrolling Cards */}
+      {/* Auto-Scrolling Cards Section */}
       <div
         ref={scrollRef}
         style={{
-          scrollbarWidth: "none",     // Firefox
-          msOverflowStyle: "none",    // IE/Edge
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
         }}
-        className="flex overflow-x-scroll bg-white py-10"
+        className="flex overflow-x-scroll justify-between items-center bg-white"
       >
-        <SportsCard
-          title="TENNIS CLUB"
-          subTitle="Consecteture adipiscing elit sed do euismod tempo."
-        />
-        <SportsCard
-          title="TOP COACHES"
-          subTitle="Consecteture adipiscing elit sed do euismod tempo."
-        />
-        <SportsCard
-          title="ONLINE STORE"
-          subTitle="Consecteture adipiscing elit sed do euismod tempo."
-        />
-        <SportsCard
-          title="24/7 SUPPORT"
-          subTitle="Consecteture adipiscing elit sed do euismod tempo."
-        />
+        {sportsEventsData.events.map((item, index) => (
+          <div key={index} className="flex items-center">
+            <SportsCard
+              title={item.title}
+              subTitle={item.subTitle}
+              logo={item.logo}
+            />
+            {index !== sportsEventsData.events.length - 1 && <VerticalLine />}
+          </div>
+        ))}
       </div>
 
-      {/* 🧠 Custom About Section */}
+      {/* About Section from JSON */}
       <CustomAboutSection
-        title="Celebrate Movement,"
-        subTitle="Competition and Team Spirit"
-        imagePath="/custom-bg.png"
-        bgColor="#FFFFFF"
-        headingDotColor="#00CBB8"
-        textColor="#1f2937"
-        content="We aim to make learning joyful and purposeful for every child by combining creativity, sports, and emotional development through customized programs and expert mentors."
-        videoUrl="https://www.youtube.com/embed/zYhBJoBUSYA?autoplay=1&mute=1"
-        clampLines={3}
+        title={sportsEventsData.about.title}
+        subTitle={sportsEventsData.about.subTitle}
+        imagePath={sportsEventsData.about.imagePath}
+        bgColor={sportsEventsData.about.bgColor}
+        headingDotColor={sportsEventsData.about.headingDotColor}
+        textColor={sportsEventsData.about.textColor}
+        content={sportsEventsData.about.content}
+        videoUrl={sportsEventsData.about.videoUrl}
+        clampLines={sportsEventsData.about.clampLines}
         className="md:pt-30"
-      /> 
-      {/* <SportsImageGrid/> */}
+      />
+
+      {/* Images/Visual Section */}
       <div className="bg-white">
-         <CurriImages/>
+        <CurriImages />
       </div>
-     
     </>
   );
 };

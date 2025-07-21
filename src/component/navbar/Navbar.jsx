@@ -48,7 +48,7 @@ export const Navbar = () => {
             )}
           </AnimatePresence>
         </div>
-        <NavLink to="/gallery" text="Gallery" />
+        <NavLink to="#gallery" text="Gallery" />
         <NavLink to="/careers" text="Careers" />
       </div>
 

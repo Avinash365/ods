@@ -16,6 +16,7 @@
   --font-gwendolyn: 'Gwendolyn', cursive;
 }
 
+
 /* ===================== Theme Config ===================== */
 @theme {
   --font-sans: var(--font-geist-sans);
@@ -74,6 +75,10 @@
 
 /* ===================== Global Styles (outside @layer!) ===================== */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -81,7 +86,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} 
+
 
 /* Hide scrollbar in all modern browsers */
 .scrollbar-hidden {

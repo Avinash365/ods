@@ -33,7 +33,7 @@ export const CustomAboutSection = ({
         </div>
 
         <p
-          className={`text-xl lg:text-2xl font-normal leading-relaxed mb-4 transition-all duration-300 ease-in-out ${
+          className={`font-normal leading-relaxed mb-4 transition-all duration-300 ease-in-out ${
             expanded ? "" : `line-clamp-${clampLines}`
           }`}
           style={{ color: textColor }}
@@ -42,7 +42,7 @@ export const CustomAboutSection = ({
         </p>
 
         <a
-          className="underline cursor-pointer text-lg lg:text-2xl"
+          className="underline cursor-pointer "
           style={{ color: textColor }}
           onClick={() => setExpanded(!expanded)}
         >

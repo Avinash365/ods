@@ -30,7 +30,7 @@ const BenefitItem = ({ text, logo }) => {
       <div className="w-[50px] h-[50px] rounded-full bg-amber-300 flex items-center justify-center overflow-hidden">
         <img src={logo} alt="benefit icon" className="w-6 h-6" />
       </div>
-      <p className="text-lg">{text}</p>
+      <p className="">{text}</p>
     </div>
   );
 };
